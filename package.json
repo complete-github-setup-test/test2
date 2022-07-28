@@ -1,0 +1,44 @@
+{
+  "name": "test2",
+  "version": "0.0.1",
+  "description": "test2",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "jest",
+    "build": "esbuild ./src/index.js --bundle --platform=node --minify-whitespace --outfile=dist/index.js",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --collectCoverage",
+    "prettier:format": "prettier --config .prettierrc --write .",
+    "prettier:check": "prettier --config .prettierrc --check .",
+    "lint": "eslint **/*.{js,ts,tsx} --fix --no-error-on-unmatched-pattern",
+    "prepare:push": "npm run prettier:format && npm run lint && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/complete-github-setup-test/test2.git"
+  },
+  "keywords": [],
+  "author": "FlemmingBehrend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/complete-github-setup-test/test2/issues"
+  },
+  "homepage": "https://github.com/complete-github-setup-test/test2#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "esbuild": "^0.14.51",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.7.4"
+  }
+}
