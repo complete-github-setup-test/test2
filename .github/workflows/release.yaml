@@ -5,7 +5,7 @@ on:
     inputs:
       version:
         type: choice
-        description: "Version (major, minor, patch)"
+        description: 'Version (major, minor, patch)'
         required: true
         options:
           - major
